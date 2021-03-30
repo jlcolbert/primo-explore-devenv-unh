@@ -1,0 +1,15 @@
+{
+  "name": "01usnh_unh-main",
+  "version": "1.0.0",
+  "description": "Customizations for the MAIN view",
+  "main": "js/custom.js",
+  "devDependencies": {
+    "primo-explore-help-menu": "^1.6.3",
+    "primo-explore-unpaywall": "^1.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

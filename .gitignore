@@ -1,0 +1,9 @@
+primo-explore/tmp/
+
+!primo-explore/custom/.gitignore
+!primo-explore/tmp/.gitignore
+
+.idea/
+package-lock.json
+.DS_Store
+node_modules/

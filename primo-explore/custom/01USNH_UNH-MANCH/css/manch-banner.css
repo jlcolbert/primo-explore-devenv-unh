@@ -1,0 +1,9 @@
+/* LOCAL BANNER */
+body::before {
+  content: "UNH Manchester Library patrons: Click Request to reserve Manchester materials. Submit an ILL form for all other items.";
+  display: inline-block;
+  background: #ecd90f;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
