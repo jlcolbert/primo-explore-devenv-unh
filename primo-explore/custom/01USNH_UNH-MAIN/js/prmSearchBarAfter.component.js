@@ -51,6 +51,29 @@ app
         set: 'action',
         icon: 'ic_question_answer_24px',
       },
+      show_xs: true,
+      cssClasses: 'button-over-light',
+    },
+    {
+      name: 'Hours',
+      description: 'Library hours',
+      action: 'https://library.unh.edu/about-us/hours',
+      icon: {
+        set: 'action',
+        icon: 'ic_schedule_24px',
+      },
+      show_xs: true,
+      cssClasses: 'button-over-light',
+    },
+    {
+      name: 'Locations',
+      description: 'Library locations',
+      action: 'https://library.unh.edu/locations',
+      icon: {
+        set: 'maps',
+        icon: 'ic_place_24px',
+      },
+      show_xs: true,
       cssClasses: 'button-over-light',
     },
   ]);

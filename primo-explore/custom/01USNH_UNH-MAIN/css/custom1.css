@@ -1039,6 +1039,7 @@ prm-search-bar {
 }
 search-bar-sub-menu ul {
   margin: 0;
+  padding: 0px;
 }
 search-bar-sub-menu ul li {
   display: inline;
