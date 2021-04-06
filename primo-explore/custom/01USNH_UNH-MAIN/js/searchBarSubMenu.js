@@ -1,13 +1,6 @@
-// - configure Search Bar Sub Menu - //
-app
-  .component('prmSearchBarAfter', {
-    bindings: {
-      parentCtrl: '<',
-    },
-    template:
-      '<search-bar-sub-menu parent-ctrl="$ctrl.parentCtrl"></search-bar-sub-menu>',
-  })
-  .constant('searchBarSubMenuItems', [
+export default {
+  name: 'searchBarSubMenuItems',
+  config: [
     {
       name: 'How To Search',
       description: 'Learn how to use the library search box',
@@ -76,4 +69,5 @@ app
       show_xs: true,
       cssClasses: 'button-over-light',
     },
-  ]);
+  ],
+};

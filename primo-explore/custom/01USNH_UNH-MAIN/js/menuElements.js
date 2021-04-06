@@ -1,4 +1,4 @@
-export let unh_list_of_elements = [
+export let unhListOfItems = [
   {
     id: 'getting-started',
     title: 'Getting Started',
@@ -17,10 +17,41 @@ export let unh_list_of_elements = [
   },
   {
     id: 'tutorials',
-    title: 'Tutorials',
+    title: 'Library Tutorials',
     description:
       'at a minimum, links to individual videos and a playlist of existing BULS video tutorials (tbd if in Kaltura, WordPress, or youtube); if possible and desired, embed using Kaltura embed code',
     icon: { code: 'shop_two', group: 'action' },
+    template: `
+      <h2>Library Tutorials Research Guides:</h2>
+      <style>.no-bullet { list-style: none; }</style>
+      <ul class="no-bullet">
+        <li>
+          <a class="arrow-link md-primoExplore-theme" href="https://libraryguides.unh.edu/tutorials" target="_blank">
+            <span ng-if="link.linkURL.length > 0 &amp;&amp; link.displayLabel.indexOf('$$E') != 0" ng-bind-html="link.displayLabel">Library Tutorials: Start Here</span>
+          </a>
+        </li>
+        <li>
+          <a class="arrow-link md-primoExplore-theme" href="https://libraryguides.unh.edu/c.php?g=904188&p=6519518" target="_blank">
+            <span ng-if="link.linkURL.length > 0 &amp;&amp; link.displayLabel.indexOf('$$E') != 0" g-bind-html="link.displayLabel">How to Find Full Text</span>
+          </a>
+        </li>
+        <li>
+          <a class="arrow-link md-primoExplore-theme" href="https://libraryguides.unh.edu/c.php?g=904188&p=6550618" target="_blank">
+            <span ng-if="link.linkURL.length > 0 &amp;&amp; link.displayLabel.indexOf('$$E') != 0" ng-bind-html="link.displayLabel">How to Find a Book</span>
+          </a>
+        </li>
+        <li>
+          <a class="arrow-link md-primoExplore-theme" href="https://libraryguides.unh.edu/c.php?g=904188&p=6527296" target="_blank">
+            <span ng-if="link.linkURL.length > 0 &amp;&amp; link.displayLabel.indexOf('$$E') != 0" ng-bind-html="link.displayLabel">How to Request Full Text</span>
+          </a>
+        </li>
+        <li>
+          <a class="arrow-link md-primoExplore-theme" href="https://libraryguides.unh.edu/c.php?g=904188&p=7768455" target="_blank">
+            <span ng-if="link.linkURL.length > 0 &amp;&amp; link.displayLabel.indexOf('$$E') != 0" ng-bind-html="link.displayLabel">How to Find Journals</span>
+          </a>
+        </li>
+      </ul>
+    `,
   },
   {}, // DIVIDER, // search-specific
   {

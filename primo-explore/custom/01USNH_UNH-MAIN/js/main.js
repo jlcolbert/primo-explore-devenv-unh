@@ -3,9 +3,8 @@ import '@orbis-cascade/primo-explore-external-search';
 import 'primo-explore-help-menu'; // import './help-menu.js'
 import 'primo-explore-search-bar-sub-menu';
 
-import unpaywallConfig from './unpaywall';
-import { unh_list_of_updates } from './menuUpdates';
-import { unh_list_of_elements } from './menuElements';
+import { unhListOfUpdates } from './menuUpdates';
+import { unhListOfItems } from './menuElements';
 import { searchTargets } from './searchConfig';
 import searchBarSubMenuItemsConfig from './searchBarSubMenu';
 
@@ -17,8 +16,24 @@ var app = angular.module('viewCustom', [
   'helpMenuTopbar',
   'searchBarSubMenu',
 ]);
+
 app
-  .constant(unpaywallConfig.name, unpaywallConfig.config)
+  .constant('unpaywallConfig', {
+    email: 'jay.colbert@unh.edu',
+    showOnResultsPage: true,
+    overrideOACheck: true,
+    showVersionLabel: true,
+    logToConsole: true,
+    showDebugTable: false,
+    publishEvents: false,
+    labelText: 'View Open Access Version via Unpaywall',
+    imageUrl:
+      'https://upload.wikimedia.org/wikipedia/commons/archive/2/25/20181007070735%21Open_Access_logo_PLoS_white.svg',
+    imageStyle: 'width: 20px; padding-right:5px; vertical-align: middle;',
+  })
+  .component('prmSearchResultAvailabilityLineAfter', {
+    template: '<bulib-unpaywall></bulib-unpaywall>',
+  })
   .constant('helpMenuConfig', {
     logToConsole: true,
     publishEvents: false,
@@ -28,9 +43,9 @@ app
 
     helpMenuTitle: 'Search Menu',
     updatesLabel: 'Search Updates',
-    list_of_updates: unh_list_of_updates,
+    list_of_updates: unhListOfUpdates,
     entriesLabel: 'Help Entries',
-    list_of_elements: unh_list_of_elements,
+    list_of_elements: unhListOfItems,
 
     helpMenuWidth: 500,
   })
@@ -38,9 +53,6 @@ app
     searchBarSubMenuItemsConfig.name,
     searchBarSubMenuItemsConfig.config
   )
-  .component('prmSearchResultAvailabilityLineAfter', {
-    template: '<bulib-unpaywall></bulib-unpaywall>',
-  })
   .component('prmSearchBarAfter', {
     template: '<search-bar-sub-menu></search-bar-sub-menu>',
   })

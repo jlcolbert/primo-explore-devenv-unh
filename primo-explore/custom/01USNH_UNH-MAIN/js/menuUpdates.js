@@ -1,4 +1,4 @@
-export let unh_list_of_updates = [
+export let unhListOfUpdates = [
   {
     id: 'hathitrust-availability',
     title: 'Hathi Trust Availability ETAS',

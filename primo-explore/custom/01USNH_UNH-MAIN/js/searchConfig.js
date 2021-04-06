@@ -3,8 +3,7 @@ export let searchTargets = {
     {
       name: 'Books & Media Worldwide',
       url: 'https://unhlibrary.on.worldcat.org/search?',
-      img:
-        './custom/01USNH_UNH-EXPLORE/node_modules/@orbis-cascade/primo-explore-external-search/worldcat-logo.png',
+      img: './custom/01USNH_UNH-MAIN/img/worldcat-logo.png',
       alt: 'Worldcat Logo',
       mapping: function (queries, filters) {
         const query_mappings = {
