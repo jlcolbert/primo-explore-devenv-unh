@@ -1,0 +1,18 @@
+{
+  "name": "01usnh_unh-explore",
+  "version": "1.0.0",
+  "description": "The development package allows you to configure :",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cp node_modules/primo-explore-help-menu/dist/help-menu.css ./css/help-menu.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@orbis-cascade/primo-explore-external-search": "^1.2.0",
+    "primo-explore-help-menu": "^1.6.3",
+    "primo-explore-search-bar-sub-menu": "^1.0.11",
+    "primo-explore-unpaywall": "^1.4.1"
+  }
+}
