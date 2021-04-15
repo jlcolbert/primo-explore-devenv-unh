@@ -7,22 +7,30 @@
 prm-search-bar {
   padding-bottom: 58.5px;
 }
+
 .__sm prm-search-bar {
   padding-bottom: 49.5px;
 }
+
 .__xs prm-search-bar {
   padding-bottom: 36px;
 }
+
 search-bar-sub-menu ul {
   margin: 0;
   padding: 0px;
 }
+
 search-bar-sub-menu ul li {
   display: inline;
   list-style: none;
   padding: 0;
 }
-search-bar-sub-menu div.search-bar-sub-menu {
+
+search-bar-sub-menu div.layout-align-end-center.layout-row.flex.search-bar-sub-menu {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   background-color: #dcdedf;
   position: absolute;
   bottom: 0;
@@ -30,6 +38,7 @@ search-bar-sub-menu div.search-bar-sub-menu {
   width: 100%;
   height: 36px;
 }
+
 search-bar-sub-menu .md-button.md-small {
   font-size: 0.75em;
   min-width: 42px;

@@ -1,10 +1,10 @@
-export let unhListOfUpdates = [
+const Updates = [
   {
-    id: 'hathitrust-availability',
-    title: 'Hathi Trust Availability ETAS',
+    id: "hathitrust-availability",
+    title: "Hathi Trust Availability ETAS",
     description:
-      'the hathitrust emergency temporary access service (ETAS) allows online reading access to selected materials',
-    icon: { code: 'mediation', group: 'action' },
+      "the hathitrust emergency temporary access service (ETAS) allows online reading access to selected materials",
+    icon: { code: "mediation", group: "action" },
     template: `
       <h3>About the HathiTrust Emergency Temporary Access Service (ETAS)</h3>
       <p>The HathiTrust Emergency Temporary Access Service (ETAS) allows current BU students, faculty, and staff to have <strong>online reading access to selected materials that are in the BU Libraries but are currently unavailable due to the closure of the Libraries</strong>.</p>
@@ -19,11 +19,11 @@ export let unhListOfUpdates = [
     `,
   },
   {
-    id: 'visiting-the-libraries',
-    title: 'Visiting the Libraries',
+    id: "visiting-the-libraries",
+    title: "Visiting the Libraries",
     description:
-      'discussion of covid-related changes to bu libraries operation',
-    icon: { code: 'business', group: 'communication' },
+      "discussion of covid-related changes to bu libraries operation",
+    icon: { code: "business", group: "communication" },
     template: `
       <h2>Try Online First</h2>
       <p>
@@ -33,3 +33,5 @@ export let unhListOfUpdates = [
     `,
   },
 ];
+
+export default Updates;
