@@ -2,8 +2,7 @@ const ExternalSearchConfig = [
   {
     name: "Books & Media Worldwide",
     url: "https://unhlibrary.on.worldcat.org/search?",
-    img:
-      "https://github.com/jlcolbert/primo-explore-devenv-unh/blob/sandbox/primo-explore/custom/01USNH_UNH-MAIN/img/worldcat-logo.png",
+    img: "/discovery/custom/01USNH_UNH-MAIN/img/worldcat_logo.png",
     alt: "Worldcat Logo",
     // eslint-disable-next-line no-unused-vars
     mapping(queries, filters) {
