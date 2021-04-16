@@ -8,11 +8,11 @@ const HelpMenuConfig = {
   enableNotificationIndicator: true,
   notificationIndicatorExpiration: 1000 * 60 * 60 * 24 * 7 * 2,
 
-  helpMenuTitle: "Search Menu",
-  updatesLabel: "Search Updates",
+  helpMenuTitle: "Get Help",
+  updatesLabel: "What's New?",
   // eslint-disable-next-line camelcase
   list_of_updates: Updates,
-  entriesLabel: "Help Entries",
+  entriesLabel: "Search Help",
   // eslint-disable-next-line camelcase
   list_of_elements: Items,
 

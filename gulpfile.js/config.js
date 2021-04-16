@@ -1,9 +1,7 @@
-'use strict';
-
-let customFile = 'custom.js';
-let customModuleFile = 'custom.module.js';
-let customCssFile = 'custom1.css';
-let mainFile = 'main.js';
+const customFile = "custom.js";
+const customModuleFile = "custom.module.js";
+const customCssFile = "custom1.css";
+const mainFile = "main.js";
 
 let browserify;
 let view;
@@ -76,11 +74,11 @@ function getView() {
 }
 
 function customPath() {
-  return viewJsDir() + '/' + customFile;
+  return `${viewJsDir()}/${customFile}`;
 }
 
 function customModulePath() {
-  return viewJsDir() + '/' + customModuleFile;
+  return `${viewJsDir()}/${customModuleFile}`;
 }
 
 function viewHtmlDir() {
@@ -92,15 +90,15 @@ function viewJsDir() {
 }
 
 function mainPath() {
-  return viewJsDir() + '/*.js';
+  return `${viewJsDir()}/*.js`;
 }
 
 function mainJsPath() {
-  return viewJsDir() + '/main.js';
+  return `${viewJsDir()}/${mainFile}`;
 }
 
 function customCssMainPath() {
-  return viewCssDir() + '/*.css';
+  return `${viewCssDir()}/*.css`;
 }
 function customColorsPath() {
   return `colors.json`;
@@ -117,7 +115,7 @@ function customScssDir() {
   return `primo-explore/custom/${view}/scss`;
 }
 function customScssMainPath() {
-  return customScssDir() + '/main.scss';
+  return `${customScssDir()}/main.scss`;
 }
 function customCssPath() {
   return `primo-explore/custom/${view}/css/custom1.css`;
@@ -151,8 +149,8 @@ function customNpmHtmlPath() {
   return `primo-explore/custom/${view}/node_modules/primo-explore*/html/*.html`;
 }
 
-var SERVERS = {
-  local: 'http://localhost:8002',
+const SERVERS = {
+  local: "http://localhost:8002",
 };
 
 /**
@@ -163,50 +161,50 @@ var SERVERS = {
  *   var PROXY_SERVER = 'http://abc-primo.hosted.exlibrisgroup.com'
  *   var PROXY_SERVER = 'https://abc-primo.hosted.exlibrisgroup.com:443'
  */
-var PROXY_SERVER = 'https://unh-psb.primo.exlibrisgroup.com:443';
+var PROXY_SERVER = "https://unh-psb.primo.exlibrisgroup.com:443";
 
-let buildParams = {
-  customFile: customFile,
-  customCssFile: customCssFile,
-  customPath: customPath,
-  customModulePath: customModulePath,
-  mainPath: mainPath,
-  mainJsPath: mainJsPath,
-  viewRootDir: viewRootDir,
-  viewJsDir: viewJsDir,
-  viewHtmlDir: viewHtmlDir,
-  viewCssDir: viewCssDir,
-  customScssDir: customScssDir,
-  customScssMainPath: customScssMainPath,
-  customCssPath: customCssPath,
-  customNpmModuleRootDir: customNpmModuleRootDir,
-  customNpmJsPath: customNpmJsPath,
-  customNpmDistPath: customNpmDistPath,
-  customNpmJsCustomPath: customNpmJsCustomPath,
-  customNpmJsModulePath: customNpmJsModulePath,
-  customNpmCssPath: customNpmCssPath,
-  customNpmHtmlPath: customNpmHtmlPath,
-  customCssMainPath: customCssMainPath,
-  customColorsPath: customColorsPath,
+const buildParams = {
+  customFile,
+  customCssFile,
+  customPath,
+  customModulePath,
+  mainPath,
+  mainJsPath,
+  viewRootDir,
+  viewJsDir,
+  viewHtmlDir,
+  viewCssDir,
+  customScssDir,
+  customScssMainPath,
+  customCssPath,
+  customNpmModuleRootDir,
+  customNpmJsPath,
+  customNpmDistPath,
+  customNpmJsCustomPath,
+  customNpmJsModulePath,
+  customNpmCssPath,
+  customNpmHtmlPath,
+  customCssMainPath,
+  customColorsPath,
 };
 
 module.exports = {
-  buildParams: buildParams,
-  PROXY_SERVER: PROXY_SERVER,
-  setView: setView,
-  setUseScss: setUseScss,
-  getUseScss: getUseScss,
-  setProxy: setProxy,
-  getReinstallNodeModules: getReinstallNodeModules,
-  setReinstallNodeModules: setReinstallNodeModules,
+  buildParams,
+  PROXY_SERVER,
+  setView,
+  setUseScss,
+  getUseScss,
+  setProxy,
+  getReinstallNodeModules,
+  setReinstallNodeModules,
   proxy: getProxy,
   view: getView,
-  getBrowserify: getBrowserify,
-  setBrowserify: setBrowserify,
-  getVe: getVe,
-  setVe: setVe,
-  getSaml: getSaml,
-  setSaml: setSaml,
-  getCas: getCas,
-  setCas: setCas,
+  getBrowserify,
+  setBrowserify,
+  getVe,
+  setVe,
+  getSaml,
+  setSaml,
+  getCas,
+  setCas,
 };
