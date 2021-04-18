@@ -5,19 +5,17 @@ __metadata:
   version: 4
   cacheKey: 7
 
-"01USNH_UNH-LAW@workspace:primo-explore/custom/01USNH_UNH-LAW":
+"01usnh_unh-explore@workspace:primo-explore/custom/01USNH_UNH-EXPLORE":
   version: 0.0.0-use.local
-  resolution: "01USNH_UNH-LAW@workspace:primo-explore/custom/01USNH_UNH-LAW"
-  dependencies:
-    primo-explore-unpaywall: ^1.4.1
+  resolution: "01usnh_unh-explore@workspace:primo-explore/custom/01USNH_UNH-EXPLORE"
   languageName: unknown
   linkType: soft
 
-"01USNH_UNH-MANCH@workspace:primo-explore/custom/01USNH_UNH-MANCH":
+"01usnh_unh-law@workspace:primo-explore/custom/01USNH_UNH-LAW":
   version: 0.0.0-use.local
-  resolution: "01USNH_UNH-MANCH@workspace:primo-explore/custom/01USNH_UNH-MANCH"
+  resolution: "01usnh_unh-law@workspace:primo-explore/custom/01USNH_UNH-LAW"
   dependencies:
-    primo-explore-lod-author-card: 0.0.3
+    primo-explore-unpaywall: ^1.4.1
   languageName: unknown
   linkType: soft
 
@@ -29,6 +27,14 @@ __metadata:
     primo-explore-help-menu: ^1.6.3
     primo-explore-search-bar-sub-menu: ^1.0.11
     primo-explore-unpaywall: ^1.4.1
+  languageName: unknown
+  linkType: soft
+
+"01usnh_unh-manch@workspace:primo-explore/custom/01USNH_UNH-MANCH":
+  version: 0.0.0-use.local
+  resolution: "01usnh_unh-manch@workspace:primo-explore/custom/01USNH_UNH-MANCH"
+  dependencies:
+    primo-explore-lod-author-card: ^0.0.6
   languageName: unknown
   linkType: soft
 
@@ -9841,10 +9847,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"primo-explore-lod-author-card@npm:0.0.3":
-  version: 0.0.3
-  resolution: "primo-explore-lod-author-card@npm:0.0.3"
-  checksum: 3876d20267967c0523c1678bd546d418e4ad7920384e370f852b9f46f9cff545b00e0f020759780f70a9b60b976a69f46d7d4525f3b7dcb4c4449b02556f86bb
+"primo-explore-lod-author-card@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "primo-explore-lod-author-card@npm:0.0.6"
+  checksum: b890f8eab0c97aef13e7c7c476ccd706da3af8681b90c15aec663d810a3c6c7bac05a4107414fadf4dede1ccf59400616a581429b233efc277e0f59620fc05be
   languageName: node
   linkType: hard
 

@@ -1,0 +1,14 @@
+{
+  "primary": "#003591",
+  "secondary": "#0044bb",
+  "backgroundColor": "#ffffff",
+  "links": "#5C92BD",
+  "warning": "#cb4d0b",
+  "positive": "#0C6600",
+  "negative": "#A3A9AC",
+  "notice": "#f77a05",
+  "linkTitle": "#33FFFF",
+  "citation": "tomato",
+  "citationTitles": "rgb(68, 112, 123)",
+  "personalization": "#7d1538"
+}

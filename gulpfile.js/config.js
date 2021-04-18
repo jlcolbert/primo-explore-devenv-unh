@@ -11,6 +11,20 @@ let reinstallNodeModules;
 let saml;
 let cas;
 
+const SERVERS = {
+  local: "http://localhost:8002",
+};
+
+/**
+ * The URL to your sandbox or production Primo instance.
+ * For SSL environments (https), the port number (443) must be included.
+ *
+ * Examples:
+ *   var PROXY_SERVER = 'http://abc-primo.hosted.exlibrisgroup.com'
+ *   var PROXY_SERVER = 'https://abc-primo.hosted.exlibrisgroup.com:443'
+ */
+const PROXY_SERVER = "https://unh-psb.primo.exlibrisgroup.com:443";
+
 function setView(_view) {
   view = _view;
 }
@@ -73,6 +87,10 @@ function getView() {
   return view;
 }
 
+function viewJsDir() {
+  return `primo-explore/custom/${view}/js`;
+}
+
 function customPath() {
   return `${viewJsDir()}/${customFile}`;
 }
@@ -85,16 +103,16 @@ function viewHtmlDir() {
   return `primo-explore/custom/${view}/html`;
 }
 
-function viewJsDir() {
-  return `primo-explore/custom/${view}/js`;
-}
-
 function mainPath() {
   return `${viewJsDir()}/*.js`;
 }
 
 function mainJsPath() {
   return `${viewJsDir()}/${mainFile}`;
+}
+
+function viewCssDir() {
+  return `primo-explore/custom/${view}/css`;
 }
 
 function customCssMainPath() {
@@ -108,15 +126,14 @@ function viewRootDir() {
   return `primo-explore/custom/${view}`;
 }
 
-function viewCssDir() {
-  return `primo-explore/custom/${view}/css`;
-}
 function customScssDir() {
   return `primo-explore/custom/${view}/scss`;
 }
+
 function customScssMainPath() {
   return `${customScssDir()}/main.scss`;
 }
+
 function customCssPath() {
   return `primo-explore/custom/${view}/css/custom1.css`;
 }
@@ -148,20 +165,6 @@ function customNpmCssPath() {
 function customNpmHtmlPath() {
   return `primo-explore/custom/${view}/node_modules/primo-explore*/html/*.html`;
 }
-
-const SERVERS = {
-  local: "http://localhost:8002",
-};
-
-/**
- * The URL to your sandbox or production Primo instance.
- * For SSL environments (https), the port number (443) must be included.
- *
- * Examples:
- *   var PROXY_SERVER = 'http://abc-primo.hosted.exlibrisgroup.com'
- *   var PROXY_SERVER = 'https://abc-primo.hosted.exlibrisgroup.com:443'
- */
-var PROXY_SERVER = "https://unh-psb.primo.exlibrisgroup.com:443";
 
 const buildParams = {
   customFile,
