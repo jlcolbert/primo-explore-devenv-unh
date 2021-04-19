@@ -75,8 +75,8 @@ const Items = [
     template: `
       <h2>Databases/Journals</h2>
       <h3>Databases</h3>
-      <p>The UNH Library subscribes to many databases. When you perform a search, your resuts will include items from (most of) those databases.</p>
-      <p>Databases are primarily used to find scholarly articles.</p>
+      <p>The UNH Library subscribes to many databases. When you perform a search, your results will include items from (most of) those databases.</p>
+      <p>While many of the databases are primarily used to find scholarly articles, some databases also provide access to statistics, images and audio, historical documents, and more.</p>
       <p>You can search the name of a database in the Library Search Box, or you can use our <a href="https://library.unh.edu/find/databases">Databases</a> page to look for and visit specific databases.</p>
       <h3>Journals</h3>
       <p>Most of the time, the resources in databases come from journals. You can search in specific journals by using the <a href="https://unh.primo.exlibrisgroup.com/discovery/jsearch?vid=01USNH_UNH:MAIN">Journal Search</a>.</p>
@@ -104,7 +104,7 @@ const Items = [
     description: `TBD info about ILL, scope of collections, and problem cases`,
     icon: { code: "swap_horiz", group: "action" },
     template: `
-      <p>Research can be a tedious process. It takes time and patience to figure out the right search to find what you're looking for. When you're having trouble, try these options:<p>
+      <p>Research can be an iterative process. It takes time and patience to figure out the right search to find what you're looking for. When you're having trouble, try these options:<p>
       <h2>Repeat your search in an external database</h2>
       <p>Using the "External Search" filter, click "Books & Media Worldwide" to repeat your search in our WorldCat discovery service. Use this primarily for books, CDs, DVDs, and other physical items.</p>
       <p>Also in the "External Search" filter is the option to repeat your search in Google Scholar. Use this for scholarly articles.</p>
@@ -143,8 +143,7 @@ const Items = [
   {
     id: "saving-results",
     title: "Saving Results",
-    description:
-      "information about My Favorites, exporting results, ref managers",
+    description: "information about My Favorites, exporting results, ref managers",
     icon: { code: "save", group: "content" },
     template: `
       <h2>My Favorites</h2>
@@ -174,8 +173,7 @@ const Items = [
   {
     id: "citing-sources",
     title: "Citing Sources",
-    description:
-      "likely, but may depend on if including saving results; would have info about ref managers",
+    description: "likely, but may depend on if including saving results; would have info about ref managers",
     icon: { code: "create", group: "content" },
     template: `
       <h2>Citation Formatting</h2>
@@ -231,8 +229,7 @@ const Items = [
   {
     id: "ask-us",
     title: "Ask Us",
-    description:
-      "needs definition; how to point to chat? link to ask a librarian?",
+    description: "needs definition; how to point to chat? link to ask a librarian?",
     icon: { code: "forum", group: "communication" },
     template: `
       <h2>Ask Us!</h2>

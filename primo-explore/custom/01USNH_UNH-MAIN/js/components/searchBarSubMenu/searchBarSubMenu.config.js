@@ -12,32 +12,6 @@ const SearchBarSubMenuConfig = [
     cssClasses: "button-over-light",
   },
   {
-    name: "UNH Law Library",
-    description: "Search the Law Library",
-    action:
-      "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:LAW",
-    icon: {
-      set: "action",
-      icon: "ic_search_24px",
-    },
-    // eslint-disable-next-line camelcase
-    show_xs: true,
-    cssClasses: "button-over-light",
-  },
-  {
-    name: "UNH Manchester Library",
-    description: "Search the Manchester Library",
-    action:
-      "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:MANCH",
-    icon: {
-      set: "action",
-      icon: "ic_search_24px",
-    },
-    // eslint-disable-next-line camelcase
-    show_xs: true,
-    cssClasses: "button-over-light",
-  },
-  {
     name: "Ask a Librarian",
     description: "Get help with your research",
     action: "https://library.unh.edu/research-support/ask-librarian",
@@ -68,6 +42,30 @@ const SearchBarSubMenuConfig = [
     icon: {
       set: "maps",
       icon: "ic_place_24px",
+    },
+    // eslint-disable-next-line camelcase
+    show_xs: true,
+    cssClasses: "button-over-light",
+  },
+  {
+    name: "UNH Law Library",
+    description: "Search the Law Library",
+    action: "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:LAW",
+    icon: {
+      set: "action",
+      icon: "ic_search_24px",
+    },
+    // eslint-disable-next-line camelcase
+    show_xs: true,
+    cssClasses: "button-over-light",
+  },
+  {
+    name: "UNH Manchester Library",
+    description: "Search the Manchester Library",
+    action: "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:MANCH",
+    icon: {
+      set: "action",
+      icon: "ic_search_24px",
     },
     // eslint-disable-next-line camelcase
     show_xs: true,
