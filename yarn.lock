@@ -6089,7 +6089,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"gulp@npm:4.0.2":
+"gulp@npm:^4.0.2":
   version: 4.0.2
   resolution: "gulp@npm:4.0.2"
   dependencies:
@@ -9798,7 +9798,7 @@ fsevents@~2.3.1:
     fs-extra: 9.1.0
     glob: 7.1.6
     graceful-fs: 4.2.6
-    gulp: 4.0.2
+    gulp: ^4.0.2
     gulp-angular-templatecache: ^3.0.0
     gulp-autoprefixer: 7.0.1
     gulp-babel: 8.0.0

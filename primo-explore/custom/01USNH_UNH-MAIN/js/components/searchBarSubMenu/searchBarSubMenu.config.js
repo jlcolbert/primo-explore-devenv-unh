@@ -12,6 +12,18 @@ const SearchBarSubMenuConfig = [
     cssClasses: "button-over-light",
   },
   {
+    name: "Citation Search",
+    description: "Search with citation information, DOI, or other identifiers",
+    action: "https://unh.primo.exlibrisgroup.com/discovery/citationlinker?vid=01USNH_UNH:MAIN",
+    icon: {
+      set: "editor",
+      icon: "ic_format_quote_24px",
+    },
+    // eslint-disable-next-line camelcase
+    show_xs: true,
+    cssClasses: "button-over-light",
+  },
+  {
     name: "Ask a Librarian",
     description: "Get help with your research",
     action: "https://library.unh.edu/research-support/ask-librarian",

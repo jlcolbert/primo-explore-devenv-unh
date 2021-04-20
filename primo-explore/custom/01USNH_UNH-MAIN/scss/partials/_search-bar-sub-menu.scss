@@ -19,6 +19,10 @@ prm-search-bar {
 search-bar-sub-menu ul {
   margin: 0;
   padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
 }
 
 search-bar-sub-menu ul li {
