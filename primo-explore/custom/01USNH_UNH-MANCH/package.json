@@ -1,8 +1,8 @@
 {
-  "name": "01USNH_UNH-MANCH",
+  "name": "01usnh_unh-manch",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Customizations for the MANCH view",
+  "main": "js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "primo-explore-lod-author-card": "0.0.3"
+    "primo-explore-lod-author-card": "^0.0.6"
   }
 }

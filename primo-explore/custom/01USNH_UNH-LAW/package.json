@@ -1,8 +1,8 @@
 {
-  "name": "01USNH_UNH-LAW",
+  "name": "01usnh_unh-law",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Customizations for the LAW view",
+  "main": "js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
