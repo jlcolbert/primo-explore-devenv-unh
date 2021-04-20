@@ -820,9 +820,6 @@ md-list.prm-list.prm-linkable-list-items .md-button.arrow-link-button md-list-it
 .prm-personalization-bg, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked .md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked ._md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked .md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked ._md-bar, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked .md-thumb, prm-search-result-list prm-personalize-results-button .md-button md-switch.md-checked ._md-thumb, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked .md-thumb, prm-search-result-list prm-personalize-results-button .md-button md-switch._md-checked ._md-thumb, .sidebar .personalization-section md-checkbox.md-checked .md-icon, .sidebar .personalization-section .sidebar-list li:before, .sidebar .personalization-section ul li:before {
   background-color: #7d1538; }
 
-<<<<<<< HEAD
-/* primary color hook end*/
-=======
 /* primary color hook end*/
 /* magnifying glass and load more */
 .md-button.button-confirm, .service-form-static-panel button.button-confirm prm-icon + span, .service-form-static-panel button.button-confirm prm-icon svg path {
@@ -966,4 +963,3 @@ search-bar-sub-menu .md-button.md-small {
   font-size: 0.75em;
   min-width: 42px;
   font-weight: bold; }
->>>>>>> sandbox
