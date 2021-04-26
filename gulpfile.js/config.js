@@ -23,7 +23,7 @@ const SERVERS = {
  *   var PROXY_SERVER = 'http://abc-primo.hosted.exlibrisgroup.com'
  *   var PROXY_SERVER = 'https://abc-primo.hosted.exlibrisgroup.com:443'
  */
-const PROXY_SERVER = "https://unh-psb.primo.exlibrisgroup.com:443";
+const PROXY_SERVER = "https://unh.primo.exlibrisgroup.com:443";
 
 function setView(_view) {
   view = _view;
