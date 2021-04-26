@@ -1,6 +1,6 @@
 {
   "name": "01usnh_unh-main",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Customizations for the MAIN view",
   "main": "js/main.js",
   "devDependencies": {

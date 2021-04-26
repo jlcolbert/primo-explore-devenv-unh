@@ -27,7 +27,8 @@ const app = angular.module("viewCustom", [
   const lc = document.createElement("script");
   lc.type = "text/javascript";
   lc.async = "true";
-  lc.src = "https://v2.libanswers.com/load_chat.php?hash=17b1fa99b577483a418172851f40a779";
+  lc.src =
+    "https://v2.libanswers.com/load_chat.php?hash=17b1fa99b577483a418172851f40a779";
   // eslint-disable-next-line no-undef
   const s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(lc, s);
@@ -37,6 +38,9 @@ app
   .constant("helpMenuConfig", HelpMenuConfig)
   .constant("searchBarSubMenuItems", SearchBarSubMenuConfig)
   .constant("unpaywallConfig", UnpaywallConfig)
-  .component("prmSearchResultAvailabilityLineAfter", PRMSearchResultAvailabilityLineAfterDirective)
+  .component(
+    "prmSearchResultAvailabilityLineAfter",
+    PRMSearchResultAvailabilityLineAfterDirective
+  )
   .component("prmSearchBarAfter", PRMSearchBarAfterDirective)
   .value("searchTargets", ExternalSearchConfig);
