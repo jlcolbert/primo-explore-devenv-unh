@@ -935,8 +935,7 @@ search-bar-sub-menu ul {
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow: scroll; }
+  flex-wrap: nowrap; }
 
 search-bar-sub-menu ul li {
   display: inline;

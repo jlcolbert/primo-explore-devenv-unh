@@ -1,7 +1,7 @@
 const UnpaywallConfig = {
   email: "jay.colbert@unh.edu",
   showOnResultsPage: true,
-  overrideOACheck: false,
+  overrideOACheck: true,
   showVersionLabel: true,
   showDebugTable: false,
   publishEvents: false,
