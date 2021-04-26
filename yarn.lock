@@ -34,6 +34,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "01usnh_unh-manch@workspace:primo-explore/custom/01USNH_UNH-MANCH"
   dependencies:
+    "@orbis-cascade/primo-explore-external-search": ^1.2.0
+    primo-explore-help-menu: ^1.6.3
     primo-explore-lod-author-card: ^0.0.6
   languageName: unknown
   linkType: soft
