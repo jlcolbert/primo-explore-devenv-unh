@@ -1,9 +1,0 @@
-/* magnifying glass and load more */
-.md-button.button-confirm, .service-form-static-panel button.button-confirm prm-icon+span, .service-form-static-panel button.button-confirm prm-icon svg path {
-  color: #263645;
-}
-
-.md-button.button-confirm:hover:not([disabled]), .service-form-static-panel button.button-confirm prm-icon+span:hover:not([disabled]), .service-form-static-panel button.button-confirm prm-icon svg path:hover:not([disabled]), .md-button.button-confirm:focus:not([disabled]), .service-form-static-panel button.button-confirm prm-icon+span:focus:not([disabled]), .service-form-static-panel button.button-confirm prm-icon svg path:focus:not([disabled]), .md-button.button-confirm.hovered:not([disabled]), .service-form-static-panel button.button-confirm prm-icon+span.hovered:not([disabled]), .service-form-static-panel button.button-confirm prm-icon svg path.hovered:not([disabled]), .md-button.button-confirm.md-focused:not([disabled]), .service-form-static-panel button.button-confirm prm-icon+span.md-focused:not([disabled]), .service-form-static-panel button.button-confirm prm-icon svg path.md-focused:not([disabled]), .md-button.button-confirm._md-focused:not([disabled]), .service-form-static-panel button.button-confirm prm-icon+span._md-focused:not([disabled]), .service-form-static-panel button.button-confirm prm-icon svg path._md-focused:not([disabled]) {
-  color: #010304;
-  background-color: rgba(38, 54, 69, 0.1);
-}
