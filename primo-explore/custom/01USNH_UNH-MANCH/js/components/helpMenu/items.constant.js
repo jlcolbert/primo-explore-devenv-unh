@@ -8,6 +8,7 @@ const Items = [
     template: `
       <h2>Using the Library Search Box</h2>
       <p>The Library Search Box allows you to find scholarly articles, books, journals, streaming media, and more.</p>
+      <p>The <a href="https://libraryguides.unh.edu/librarysearchbox_unhmanchester">Using the UNH Manchester Library Search Box</a> guide gives in-depth instructions for searching.</p>
       <p>See the What's in Search section for a more detailed breakdown about the content types, collections, and materials not available in the results.</p>
       <h2>Search Tips</h2>
       <p>In a Basic Search, the items in your results will contain all of your search terms. Your terms might be in the title, author name, abstract, indexed full text, subjects, and more.</p>
