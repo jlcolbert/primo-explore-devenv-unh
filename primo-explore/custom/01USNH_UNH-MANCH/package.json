@@ -1,6 +1,6 @@
 {
   "name": "01usnh_unh-manch",
-  "version": "1.0.0",
+  "version": "2.0.2",
   "description": "Customizations for the MANCH view",
   "main": "js/main.js",
   "scripts": {
@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@orbis-cascade/primo-explore-external-search": "^1.2.0",
+    "primo-explore-help-menu": "^1.6.3",
     "primo-explore-lod-author-card": "^0.0.6"
   }
 }
