@@ -15,6 +15,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "01usnh_unh-law@workspace:primo-explore/custom/01USNH_UNH-LAW"
   dependencies:
+    "@orbis-cascade/primo-explore-external-search": ^1.2.0
+    primo-explore-search-bar-sub-menu: ^1.0.12
     primo-explore-unpaywall: ^1.4.1
   languageName: unknown
   linkType: soft
@@ -9868,6 +9870,21 @@ fsevents@~2.3.1:
     eslint-plugin-angular:
       optional: true
   checksum: b1cb284e751bd34e8cc846868876a444e286667c3e12ba7142c43cdedae4ed0e142c0f760f496b67aa68c9d1c9cde78d6a9e1c6a0fdae5d5ee3ae63cb61e7c9f
+  languageName: node
+  linkType: hard
+
+"primo-explore-search-bar-sub-menu@npm:^1.0.12":
+  version: 1.0.12
+  resolution: "primo-explore-search-bar-sub-menu@npm:1.0.12"
+  dependencies:
+    eslint: ^6.1.0
+    eslint-plugin-angular: ^4.0.1
+  dependenciesMeta:
+    eslint:
+      optional: true
+    eslint-plugin-angular:
+      optional: true
+  checksum: 4db93f026475938c012977a00a297128a4544bc84ad53813d531dc7768f45e8d422c29166b7d80fcac0e6b7474fdcd1aaea9d66fac1b2a0c7398dbc8a30e36f3
   languageName: node
   linkType: hard
 

@@ -1,4 +1,4 @@
-import UnpaywallComponent from "../components/unpaywall.component";
+import UnpaywallComponent from "../components/unpaywall/unpaywall.component";
 
 const PRMSearchResultAvailabilityLineAfterDirective = {
   template: UnpaywallComponent,
