@@ -839,6 +839,14 @@ md-list.prm-list.prm-linkable-list-items .md-button.arrow-link-button md-list-it
     -webkit-box-sizing: border-box;
     box-sizing: border-box; } }
 
+/* positions libchat widget lower on page; visible on mobile screens both orientations */
+.lcs_slide_out-r {
+  top: 50% !important; }
+
+/* moves widget higher when clicked so the bottom is visible on mobile screens both orientations */
+.lcs_slide_out-r.open {
+  top: 40% !important; }
+
 div#mainMenu {
   margin-left: 40%; }
 
@@ -851,3 +859,62 @@ div#mainMenu {
     max-height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; } }
+
+/*
+  The reason these are such specific pixels is that they were chosen
+  to space correctly around the existing search bar
+  Of course if the size of the existing search bar is different of if ExL
+  changes it these base values will be meaningless
+*/
+prm-search-bar {
+  padding-bottom: 58.5px; }
+
+.__sm prm-search-bar {
+  padding-bottom: 49.5px; }
+
+.__xs prm-search-bar {
+  padding-bottom: 36px; }
+
+search-bar-sub-menu ul {
+  margin: 0;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+
+search-bar-sub-menu ul li {
+  display: inline;
+  list-style: none;
+  padding: 0; }
+
+search-bar-sub-menu
+div.layout-align-end-center.layout-row.flex.search-bar-sub-menu {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #dcdedf;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  overflow-x: scroll;
+  /* Hide horizontal scrollbar */
+  overflow-y: hidden;
+  /* Add vertical scrollbar */ }
+
+search-bar-sub-menu .md-button.md-small {
+  font-size: 0.75em;
+  min-width: 42px;
+  font-weight: bold; }

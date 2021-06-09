@@ -1,0 +1,9 @@
+/* positions libchat widget lower on page; visible on mobile screens both orientations */
+.lcs_slide_out-r {
+  top: 50% !important;
+}
+
+/* moves widget higher when clicked so the bottom is visible on mobile screens both orientations */
+.lcs_slide_out-r.open {
+  top: 40% !important;
+}
