@@ -37,10 +37,10 @@ const SearchBarSubMenuConfig = [
     cssClasses: "button-over-light",
   },
   {
-    name: "UNH Law Library",
-    description: "Search the Law Library",
+    name: "UNH Durham Library",
+    description: "Search the Durham Library",
     action:
-      "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:LAW",
+      "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:MAIN&lang=en",
     icon: {
       set: "action",
       icon: "ic_search_24px",
