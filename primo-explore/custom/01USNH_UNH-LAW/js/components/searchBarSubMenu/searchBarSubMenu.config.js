@@ -27,7 +27,7 @@ const SearchBarSubMenuConfig = [
   {
     name: "Hours",
     description: "Library hours",
-    action: "https://library.unh.edu/about-us/hours",
+    action: "https://law.unh.libguides.com/home/calendar",
     icon: {
       set: "action",
       icon: "ic_schedule_24px",
