@@ -1,6 +1,6 @@
 {
   "name": "01usnh_unh-manch",
-  "version": "2.0.2",
+  "version": "2.0.5",
   "description": "Customizations for the MANCH view",
   "main": "js/main.js",
   "scripts": {
