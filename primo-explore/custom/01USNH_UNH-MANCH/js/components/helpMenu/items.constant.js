@@ -98,7 +98,7 @@ const Items = [
       <h2>Getting Full-Text</h2>
       <p>If we don't have an article, book or book chapter, or any other resource, you can request it through Interlibrary Loan.<p>
       <p>With Interlibrary Loan, we will borrow the resource you want from another library and check it out to you for free.</p>
-      <p>You can fill out the Interlibrary Loan form manually, or you can click "Interlibrary Loan (DURHAM users)" in "How to find it" to autopopulate a form. <strong>You must be logged into your library account to see the Interlibrary Loan option.</strong></p>
+      <p>You can fill out the <a href="https://unh.az1.qualtrics.com/jfe/form/SV_dgp3yIWf4WRrkXz">Interlibrary Loan form manually</a>, or you can click "Interlibrary Loan (MANCHESTER users)" in "How to find it" to autopopulate a form. <strong>You must be logged into your library account to see the Interlibrary Loan option.</strong></p>
     `,
   },
   {
