@@ -1,4 +1,4 @@
-#+TITLE:   UNH Explore Customization Package
+#+TITLE:   UNH Main Customization Package
 #+DATE:    July 18, 2021
 #+SINCE:   <replace with next tagged release version>
 #+STARTUP: inlineimages nofold

@@ -7,8 +7,8 @@ import ExternalSearchConfig from "./components/externalSearch/externalSearch.con
 import HelpMenuConfig from "./components/helpMenu/helpMenu.config";
 import SearchBarSubMenuConfig from "./components/searchBarSubMenu/searchBarSubMenu.config";
 import UnpaywallConfig from "./components/unpaywall/unpaywall.config";
-import PRMSearchResultAvailabilityLineAfterDirective from "./directives/prmSearchResultAvailabilityLineAfter.directive";
 import PRMSearchBarAfterDirective from "./directives/prmSearchBarAfter.directive";
+import PRMSearchResultAvailabilityLineAfterDirective from "./directives/prmSearchResultAvailabilityLineAfter.directive";
 
 // eslint-disable-next-line no-undef
 const app = angular.module("viewCustom", [
@@ -35,12 +35,12 @@ const app = angular.module("viewCustom", [
 })();
 
 app
-  .constant("helpMenuConfig", HelpMenuConfig)
-  .constant("searchBarSubMenuItems", SearchBarSubMenuConfig)
-  .constant("unpaywallConfig", UnpaywallConfig)
-  .component(
+.constant("helpMenuConfig", HelpMenuConfig)
+.constant("searchBarSubMenuItems", SearchBarSubMenuConfig)
+.constant("unpaywallConfig", UnpaywallConfig)
+.component("prmSearchBarAfter", PRMSearchBarAfterDirective)
+.component(
     "prmSearchResultAvailabilityLineAfter",
     PRMSearchResultAvailabilityLineAfterDirective
   )
-  .component("prmSearchBarAfter", PRMSearchBarAfterDirective)
-  .value("searchTargets", ExternalSearchConfig);
+.value("searchTargets", ExternalSearchConfig);
