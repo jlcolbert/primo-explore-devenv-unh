@@ -1,0 +1,179 @@
+#+TITLE:   UNH Explore Customization Package
+#+DATE:    July 18, 2021
+#+SINCE:   <replace with next tagged release version>
+#+STARTUP: inlineimages nofold
+
+* Table of Contents :TOC_3:noexport:
+- [[#description][Description]]
+  - [[#maintainers][Maintainers]]
+    - [[#update-packages][update packages]]
+- [[#prerequisites][Prerequisites]]
+- [[#features][Features]]
+  - [[#external-search][External Search]]
+  - [[#help-menu][Help Menu]]
+  - [[#libchat][LibChat]]
+  - [[#search-bar-sub-menu][Search Bar Sub Menu]]
+  - [[#unpaywall][Unpaywall]]
+- [[#configuration][Configuration]]
+  - [[#mainjs][main.js]]
+  - [[#external-search-1][External Search]]
+  - [[#help-menu-1][Help Menu]]
+  - [[#libchat-1][LibChat]]
+  - [[#search-bar-sub-menu-1][Search Bar Sub Menu]]
+  - [[#unpaywall-1][Unpaywall]]
+- [[#troubleshooting][Troubleshooting]]
+
+* Description
+# A summary of what this module does.
+
++ If possible, include a brief list of feature highlights here
++ Like code completion, syntax checking or available snippets
++ Include links to packages & external things where possible
+
+** Maintainers
++ @jlcolbert (Author)
+
+*** TODO update packages
+
+* Prerequisites
+This module has no prerequisites.
+
+* Features
+# An in-depth list of features, how to use them, and their dependencies.
+
+** External Search
+** Help Menu
+** LibChat
+** Search Bar Sub Menu
+** Unpaywall
+
+* Configuration
+# How to configure this module, including common problems and how to address them.
+** main.js
+#+begin_src javascript :noweb yes :tangle ./js/main.js
+<<imports>>
+
+<<configuration>>
+<<directives>>
+
+// eslint-disable-next-line no-undef
+const app = angular.module("viewCustom", [
+  "angularLoad",
+  <<packages>>
+]);
+
+<<libchat>>
+
+app
+<<constants>>
+<<components>>
+<<values>>;
+#+end_src
+
+** External Search
+#+begin_src javascript :noweb-ref imports
+import "@orbis-cascade/primo-explore-external-search";
+#+end_src
+
+#+begin_src javascript :noweb-ref configuration
+import ExternalSearchConfig from "./components/externalSearch/externalSearch.config";
+#+end_src
+
+#+begin_src javascript :noweb-ref packages
+"externalSearch",
+#+end_src
+
+#+begin_src javascript :noweb-ref values
+.value("searchTargets", ExternalSearchConfig)
+#+end_src
+
+** Help Menu
+#+begin_src javascript :noweb-ref imports
+import "primo-explore-help-menu";
+#+end_src
+
+#+begin_src javascript :noweb-ref configuration
+import HelpMenuConfig from "./components/helpMenu/helpMenu.config";
+#+end_src
+
+#+begin_src javascript :noweb-ref packages
+"helpMenuContentDisplay",
+"helpMenuTopbar",
+#+end_src
+
+#+begin_src javascript :noweb-ref constants
+.constant("helpMenuConfig", HelpMenuConfig)
+#+end_src
+
+** LibChat
+#+begin_src javascript :noweb-ref libchat
+// Adds the chat slide out
+// eslint-disable-next-line func-names
+(function () {
+  // eslint-disable-next-line no-undef
+  const lc = document.createElement("script");
+  lc.type = "text/javascript";
+  lc.async = "true";
+  lc.src =
+    "https://v2.libanswers.com/load_chat.php?hash=17b1fa99b577483a418172851f40a779";
+  // eslint-disable-next-line no-undef
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(lc, s);
+})();
+#+end_src
+
+** Search Bar Sub Menu
+#+begin_src javascript :noweb-ref imports
+import "primo-explore-search-bar-sub-menu";
+#+end_src
+
+#+begin_src javascript :noweb-ref configuration
+import SearchBarSubMenuConfig from "./components/searchBarSubMenu/searchBarSubMenu.config";
+#+end_src
+
+#+begin_src javascript :noweb-ref directives
+import PRMSearchBarAfterDirective from "./directives/prmSearchBarAfter.directive";
+#+end_src
+
+#+begin_src javascript :noweb-ref packages
+"searchBarSubMenu",
+#+end_src
+
+#+begin_src javascript :noweb-ref constants
+.constant("searchBarSubMenuItems", SearchBarSubMenuConfig)
+#+end_src
+
+#+begin_src javascript :noweb-ref components
+.component("prmSearchBarAfter", PRMSearchBarAfterDirective)
+#+end_src
+
+** Unpaywall
+#+begin_src javascript :noweb-ref imports
+import "primo-explore-unpaywall";
+#+end_src
+
+#+begin_src javascript :noweb-ref configuration
+import UnpaywallConfig from "./components/unpaywall/unpaywall.config";
+#+end_src
+
+#+begin_src javascript :noweb-ref directives
+import PRMSearchResultAvailabilityLineAfterDirective from "./directives/prmSearchResultAvailabilityLineAfter.directive";
+#+end_src
+
+#+begin_src javascript :noweb-ref packages
+"bulibUnpaywall",
+#+end_src
+
+#+begin_src javascript :noweb-ref constants
+.constant("unpaywallConfig", UnpaywallConfig)
+#+end_src
+
+#+begin_src javascript :noweb-ref components
+.component(
+    "prmSearchResultAvailabilityLineAfter",
+    PRMSearchResultAvailabilityLineAfterDirective
+  )
+#+end_src
+
+* Troubleshooting
+# Common issues and their solution, or places to look for help.
