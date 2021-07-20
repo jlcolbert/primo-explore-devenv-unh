@@ -143,7 +143,8 @@ const Items = [
   {
     id: "saving-results",
     title: "Saving Results",
-    description: "information about My Favorites, exporting results, ref managers",
+    description:
+      "information about My Favorites, exporting results, ref managers",
     icon: { code: "save", group: "content" },
     template: `
       <h2>My Favorites</h2>
@@ -159,7 +160,7 @@ const Items = [
       </p>
       <h2>Saved Searches</h2>
       <p>You can save searches to run again later, or to set alerts to be notified via email when new records are available.</p>
-      <p>Saved search alerts are most effective when combined with filters, such as material type(s), date range, and availability.</p> 
+      <p>Saved search alerts are most effective when combined with filters, such as material type(s), date range, and availability.</p>
       <p>After doing a search...</p>
       <ul>
           <li>Sign In first</li>
@@ -173,7 +174,8 @@ const Items = [
   {
     id: "citing-sources",
     title: "Citing Sources",
-    description: "likely, but may depend on if including saving results; would have info about ref managers",
+    description:
+      "likely, but may depend on if including saving results; would have info about ref managers",
     icon: { code: "create", group: "content" },
     template: `
       <h2>Citation Formatting</h2>
@@ -200,7 +202,7 @@ const Items = [
         <li>Othe citation managers that use RIS format</li>
       </ul>
       <p>
-        See our <a href="https://libraryguides.unh.edu/c.php?g=1066872" target="_blank">Zotero Series Guide</a> 
+        See our <a href="https://libraryguides.unh.edu/c.php?g=1066872" target="_blank">Zotero Series Guide</a>
         for more details on using Zotero.
       </p>
     `,
@@ -229,7 +231,8 @@ const Items = [
   {
     id: "ask-us",
     title: "Ask Us",
-    description: "needs definition; how to point to chat? link to ask a librarian?",
+    description:
+      "needs definition; how to point to chat? link to ask a librarian?",
     icon: { code: "forum", group: "communication" },
     template: `
       <h2>Ask Us!</h2>
