@@ -14,7 +14,8 @@ const SearchBarSubMenuConfig = [
   {
     name: "Citation Search",
     description: "Search with citation information, DOI, or other identifiers",
-    action: "https://unh.primo.exlibrisgroup.com/discovery/citationlinker?vid=01USNH_UNH:MAIN",
+    action:
+      "https://unh.primo.exlibrisgroup.com/discovery/citationlinker?vid=01USNH_UNH:MAIN",
     icon: {
       set: "editor",
       icon: "ic_format_quote_24px",
@@ -62,7 +63,8 @@ const SearchBarSubMenuConfig = [
   {
     name: "UNH Law Library",
     description: "Search the Law Library",
-    action: "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:LAW",
+    action:
+      "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:LAW",
     icon: {
       set: "action",
       icon: "ic_search_24px",
@@ -74,7 +76,8 @@ const SearchBarSubMenuConfig = [
   {
     name: "UNH Manchester Library",
     description: "Search the Manchester Library",
-    action: "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:MANCH",
+    action:
+      "https://unh.primo.exlibrisgroup.com/discovery/search?vid=01USNH_UNH:MANCH",
     icon: {
       set: "action",
       icon: "ic_search_24px",
