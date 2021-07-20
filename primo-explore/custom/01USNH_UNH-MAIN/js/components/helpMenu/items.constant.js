@@ -143,8 +143,7 @@ const Items = [
   {
     id: "saving-results",
     title: "Saving Results",
-    description:
-      "information about My Favorites, exporting results, ref managers",
+    description: "information about My Favorites, exporting results, ref managers",
     icon: { code: "save", group: "content" },
     template: `
       <h2>My Favorites</h2>
@@ -174,8 +173,7 @@ const Items = [
   {
     id: "citing-sources",
     title: "Citing Sources",
-    description:
-      "likely, but may depend on if including saving results; would have info about ref managers",
+    description: "likely, but may depend on if including saving results; would have info about ref managers",
     icon: { code: "create", group: "content" },
     template: `
       <h2>Citation Formatting</h2>
@@ -231,8 +229,7 @@ const Items = [
   {
     id: "ask-us",
     title: "Ask Us",
-    description:
-      "needs definition; how to point to chat? link to ask a librarian?",
+    description: "needs definition; how to point to chat? link to ask a librarian?",
     icon: { code: "forum", group: "communication" },
     template: `
       <h2>Ask Us!</h2>
