@@ -13,6 +13,10 @@
   - [[#mainjs][main.js]]
   - [[#external-search][External Search]]
   - [[#help-menu][Help Menu]]
+    - [[#import][Import]]
+    - [[#config][Config]]
+    - [[#package-definition][Package Definition]]
+    - [[#constants][Constants]]
   - [[#libchat][LibChat]]
   - [[#search-bar-sub-menu][Search Bar Sub Menu]]
   - [[#unpaywall][Unpaywall]]
@@ -135,10 +139,12 @@ import ExternalSearchConfig from "./components/externalSearch/externalSearch.con
 #+end_src
 
 ** Help Menu
+*** Import
 #+begin_src javascript :noweb-ref imports
 import "primo-explore-help-menu";
 #+end_src
 
+*** Config
 #+begin_src javascript :tangle ./js/components/helpMenu/helpMenu.config.js
 import Items from "./items.constant";
 import Updates from "./updates.constant";
@@ -168,11 +174,18 @@ export default HelpMenuConfig;
 import HelpMenuConfig from "./components/helpMenu/helpMenu.config";
 #+end_src
 
+*** Package Definition
 #+begin_src javascript :noweb-ref packages
 "helpMenuContentDisplay",
 "helpMenuTopbar",
 #+end_src
 
+*** Constants
+#+begin_src javascript :noweb-ref constants
+.constant("helpMenuConfig", HelpMenuConfig)
+#+end_src
+
+**** Items
 #+begin_src javascript :tangle ./js/components/helpMenu/items.constant.js
 const Items = [
   {
@@ -454,6 +467,7 @@ const Items = [
 export default Items;
 #+end_src
 
+**** Updates
 #+begin_src javascript :tangle ./js/components/helpMenu/updates.constant.js
 const Updates = [
   {
@@ -519,10 +533,6 @@ const Updates = [
 
 export default Updates;
 
-#+end_src
-
-#+begin_src javascript :noweb-ref constants
-.constant("helpMenuConfig", HelpMenuConfig)
 #+end_src
 
 ** LibChat
