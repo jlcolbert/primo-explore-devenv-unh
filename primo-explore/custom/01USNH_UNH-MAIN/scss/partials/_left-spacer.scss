@@ -1,8 +1,9 @@
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .flex-lg-10, .layout-row>.flex-lg-10 {
-      flex: 1 1 100%;
-      max-width: 20%;
-      max-height: 100%;
-      box-sizing: border-box;
-    }
+  .flex-lg-10,
+  .layout-row > .flex-lg-10 {
+    flex: 1 1 100%;
+    max-width: 20%;
+    max-height: 100%;
+    box-sizing: border-box;
   }
+}
