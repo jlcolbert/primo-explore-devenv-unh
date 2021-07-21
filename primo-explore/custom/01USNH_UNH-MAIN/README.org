@@ -24,6 +24,8 @@
     - [[#config-1][Config]]
     - [[#scss-1][SCSS]]
   - [[#libchat][LibChat]]
+    - [[#javascript-1][Javascript]]
+    - [[#scss-2][SCSS]]
   - [[#search-bar-sub-menu][Search Bar Sub Menu]]
     - [[#package-2][Package]]
     - [[#config-2][Config]]
@@ -606,6 +608,7 @@ help-menu-topbar .notification-indicator {
 #+end_src
 
 ** LibChat
+*** Javascript
 #+begin_src javascript :noweb-ref libchat
 // Adds the chat slide out
 // eslint-disable-next-line func-names
@@ -620,6 +623,19 @@ help-menu-topbar .notification-indicator {
   const s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(lc, s);
 })();
+#+end_src
+*** SCSS
+#+begin_src scss :tangle ./scss/partials/_libchat.scss
+/* positions libchat widget lower on page; visible on mobile screens both orientations */
+.lcs_slide_out-r {
+  top: 50% !important;
+}
+
+/* moves widget higher when clicked so the bottom is visible on mobile screens both orientations */
+.lcs_slide_out-r.open {
+  top: 40% !important;
+}
+
 #+end_src
 
 ** Search Bar Sub Menu
