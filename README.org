@@ -7,6 +7,9 @@
 - [[#structure][Structure]]
 - [[#installation][Installation]]
   - [[#prerequisitespersonal-configuration][Prerequisites/Personal Configuration]]
+  - [[#development-environment][Development Environment]]
+    - [[#yarn][Yarn]]
+    - [[#formatting][Formatting]]
   - [[#using-literate-programming][Using Literate Programming]]
 
 * Introduction
@@ -68,6 +71,128 @@ npm install -g gulp
 *Install yarn globally*
 #+begin_src shell
 npm install -g yarn
+#+end_src
+
+** Development Environment
+*In a new terminal window*, =cd= into the cloned directory.
+#+begin_src shell
+cd /path/to/primo-explore-devenv
+#+end_src
+
+*** Yarn
+I use yarn instead of npm for installing node packages.
+#+begin_src shell
+yarn set version berry
+#+end_src
+
+You'll want to keep the node modules folder, though, so create a =.yarnrc.yml= file:
+#+begin_src shell
+touch .yarnrc.yml
+#+end_src
+
+And add the following:
+#+begin_src yaml
+nodeLinker: node-modules
+#+end_src
+
+Finally, in the command line, use yarn to install the node packages:
+#+begin_src shell
+yarn
+yarn install
+#+end_src
+
+*** Formatting
+In order to keep things tidy, I use a combination of formatters and linters.
+
+**** Prettier
+I use Prettier purely for formatting, not for syntax.
+#+begin_src shell
+yarn add --dev --exact prettier
+#+end_src
+
+Create a =.prettierrc= file:
+#+begin_src shell
+touch .prettierrc
+#+end_src
+
+And at minimum put in an empty pair or curly brackets.
+This will enforce Prettier's defaults.
+#+begin_src json
+{}
+#+end_src
+
+Finally, create a =.prettierignore= file:
+#+begin_src shell
+touch .prettierignore
+#+end_src
+
+And put in the following so Prettier will ignore all of the code in the =node_modules= folder:
+#+begin_src conf
+**/node_modules/*
+#+end_src
+
+I also install it as a plugin in Visual Studio Code, for auto-formatting.
+
+**** ESLint
+ESLint is for checking problems in JavaScript code.
+#+begin_src shell
+yarn add eslint --dev
+#+end_src
+
+I like Arctic Ice Studio's JavaScript style guide, so I install their ESLint configuration:
+#+begin_src shell
+yarn add --dev @arcticicestudio/eslint-config-base
+#+end_src
+
+Create an =.eslintrc.js= file:
+#+begin_src shell
+touch .eslintrc.js
+#+end_src
+
+And an =.eslintignore= file:
+#+begin_src shell
+touch .eslintignore
+#+end_src
+
+Put the following in your =.eslintignore=:
+#+begin_src conf
+**/node_modules/*
+
+!.eslintrc.js
+#+end_src
+
+And make sure to install the ESLint Visual Studio Code plugin.
+
+To keep ESLint and Prettier from clashing, do the following:
+
+Install =eslint-config-prettier=, =eslint-plugin-import=, and =eslint-plugin-prettier=
+#+begin_src shell
+yarn add --dev eslint-config-prettier eslint-plugin-import eslint-plugin-prettier
+#+end_src
+
+And add the following to your =.eslintrc.js=:
+#+begin_src javascript
+module.exports = {
+  extends: [
+    /* Provides support for all ESLint core rules. */
+    "@arcticicestudio/eslint-config-base",
+    /*
+     * Optional entry point to enable support for projects using Prettier.
+     * Note that this must always be placed after the `@arcticicestudio/eslint-config-base` preset to take precedence,
+     * otherwise it won't prevent errors due to useless and possibly conflicting rules!
+     */
+    "@arcticicestudio/eslint-config-base/prettier",
+  ],
+  plugins: ["import"],
+  rules: {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: ["**/*.js"],
+      },
+    ],
+  },
+};
 #+end_src
 
 ** Using Literate Programming
