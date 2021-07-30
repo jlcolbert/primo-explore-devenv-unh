@@ -3,13 +3,13 @@
 #+SINCE:   <replace with next tagged release version>
 #+STARTUP: inlineimages nofold
 
+:DOC-CONFIG:
+#+auto-tangle: t
+:END:
+
 * Table of Contents :TOC_3:noexport:
 - [[#description][Description]]
   - [[#maintainers][Maintainers]]
-    - [[#update-packages][update packages]]
-    - [[#write-documentation-for-code-blocks][Write documentation for code blocks]]
-    - [[#include-scss-blocks][include (S)CSS blocks]]
-    - [[#include-html-blocks][include HTML blocks]]
 - [[#prerequisites][Prerequisites]]
 - [[#features][Features]]
 - [[#configuration][Configuration]]
@@ -41,23 +41,15 @@
 - [[#troubleshooting][Troubleshooting]]
 
 * Description
-# A summary of what this module does.
+This is the literate configuration for the University of New Hampshire Durham campus libraries' Primo VE customization package.
+This document is both the documentation and the actual configuration, in that this document will auto-generate the required JavaScript, S/CSS/ and HTML files.
 
-+ If possible, include a brief list of feature highlights here
-+ Like code completion, syntax checking or available snippets
-+ Include links to packages & external things where possible
+I write this configuration in Emacs with Org Mode, using =org-babel= to tangle the code blocks.
 
 ** Maintainers
 + @jlcolbert (Author)
 
-*** DONE update packages
-CLOSED: [2021-07-20 Tue 13:34]
-*** TODO Write documentation for code blocks
-*** TODO include (S)CSS blocks
-*** TODO include HTML blocks
-
 * Prerequisites
-This module has no prerequisites.
 
 * Features
 # An in-depth list of features, how to use them, and their dependencies.
@@ -91,6 +83,7 @@ app
 <<components>>
 <<values>>;
 #+end_src
+
 *** SCSS
 **** Partials
 ***** Magnifying Glass Button and LOAD Button
