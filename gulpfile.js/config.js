@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const customFile = "custom.js";
 const customModuleFile = "custom.module.js";
 const customCssFile = "custom1.css";

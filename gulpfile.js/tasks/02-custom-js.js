@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 const gulp = require("gulp");
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
@@ -13,36 +14,6 @@ const config = require("../config.js");
 
 const { buildParams } = config;
 
-gulp.task(
-  "watch-js",
-  gulp.series("select-view", (cb) => {
-    gulp.watch(
-      [`${buildParams.viewJsDir()}/**/*.js`, `!${buildParams.customPath()}`],
-      { interval: 1000, usePolling: true },
-      gulp.series("custom-js")
-    );
-    cb();
-  })
-);
-
-gulp.task(
-  "custom-js",
-  gulp.series("select-view", "custom-html-templates", (cb) => {
-    if (config.getBrowserify()) {
-      buildByBrowserify().on("end", cb);
-    } else {
-      buildByConcatination().on("end", cb);
-    }
-  })
-);
-
-function getBrowserifyBabelPlugins() {
-  return [
-    "transform-html-import-to-string",
-    ["angularjs-annotate", { explicitOnly: true }],
-  ];
-}
-
 function getDefaultBabelPlugins() {
   return [
     [
@@ -51,6 +22,13 @@ function getDefaultBabelPlugins() {
         "process.env.NODE_ENV": process.env.NODE_ENV,
       },
     ],
+  ];
+}
+
+function getBrowserifyBabelPlugins() {
+  return [
+    "transform-html-import-to-string",
+    ["angularjs-annotate", { explicitOnly: true }],
   ];
 }
 
@@ -111,3 +89,26 @@ function buildByBrowserify() {
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest(buildParams.viewJsDir()));
 }
+
+gulp.task(
+  "watch-js",
+  gulp.series("select-view", (cb) => {
+    gulp.watch(
+      [`${buildParams.viewJsDir()}/**/*.js`, `!${buildParams.customPath()}`],
+      { interval: 1000, usePolling: true },
+      gulp.series("custom-js")
+    );
+    cb();
+  })
+);
+
+gulp.task(
+  "custom-js",
+  gulp.series("select-view", "custom-html-templates", (cb) => {
+    if (config.getBrowserify()) {
+      buildByBrowserify().on("end", cb);
+    } else {
+      buildByConcatination().on("end", cb);
+    }
+  })
+);

@@ -73,6 +73,11 @@ npm install -g gulp
 npm install -g yarn
 #+end_src
 
+*Install Visual Studio Code*
+#+begin_src shell
+brew install --cask visual-studio-code
+#+end_src
+
 ** Development Environment
 *In a new terminal window*, =cd= into the cloned directory.
 #+begin_src shell

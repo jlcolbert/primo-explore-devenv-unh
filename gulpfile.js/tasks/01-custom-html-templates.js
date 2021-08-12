@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable no-unused-vars */
 const gulp = require("gulp");
 const wrap = require("gulp-wrap");
 const templateCache = require("gulp-angular-templatecache");

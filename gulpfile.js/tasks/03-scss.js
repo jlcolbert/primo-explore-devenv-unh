@@ -1,3 +1,10 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-shadow */
+/* eslint-disable camelcase */
+/* eslint-disable import/order */
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 const autoprefixer = require("gulp-autoprefixer");
 
 const config = require("../config").buildParams;
@@ -50,7 +57,7 @@ gulp.task("extract-scss-files", () => {
   };
 
   return request({ url, headers })
-    .pipe(zlib.createGunzip()) // Unzip
+    .pipe(zlib.createGunzip())
     .pipe(
       tar.extract(".", {
         map: (header) => {
@@ -63,7 +70,9 @@ gulp.task("extract-scss-files", () => {
     );
 });
 gulp.task("color-variables", () => {
-  const colorVariables = JSON.parse(fs.readFileSync(`${config.viewCssDir()}/colors.json`, "utf8"));
+  const colorVariables = JSON.parse(
+    fs.readFileSync(`${config.viewCssDir()}/colors.json`, "utf8")
+  );
   const colorVariablesOTB = JSON.parse(fs.readFileSync(OTBColorsFile, "utf8"));
   const colorsMeregd = lodashMerge(colorVariablesOTB, colorVariables);
   return gulp
@@ -104,7 +113,13 @@ gulp.task("compile-scss", () => {
 });
 
 gulp.task("app-css", (cb) => {
-  runSequence("extract-scss-files", "color-variables", "compile-scss", "cleanup", cb);
+  runSequence(
+    "extract-scss-files",
+    "color-variables",
+    "compile-scss",
+    "cleanup",
+    cb
+  );
 });
 
 /**
