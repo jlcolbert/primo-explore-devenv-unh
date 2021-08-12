@@ -7,7 +7,7 @@ const gulp = require("gulp");
 const cssnano = require("gulp-cssnano");
 const debug = require("gulp-debug");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 const plumber = require("gulp-plumber");
 
@@ -63,7 +63,9 @@ gulp.task("extract-scss-files", () => {
     );
 });
 gulp.task("color-variables", () => {
-  const colorVariables = JSON.parse(fs.readFileSync(`${config.viewCssDir()}/colors.json`, "utf8"));
+  const colorVariables = JSON.parse(
+    fs.readFileSync(`${config.viewCssDir()}/colors.json`, "utf8")
+  );
   const colorVariablesOTB = JSON.parse(fs.readFileSync(OTBColorsFile, "utf8"));
   const colorsMeregd = lodashMerge(colorVariablesOTB, colorVariables);
   return gulp
@@ -104,7 +106,13 @@ gulp.task("compile-scss", () => {
 });
 
 gulp.task("app-css", (cb) => {
-  runSequence("extract-scss-files", "color-variables", "compile-scss", "cleanup", cb);
+  runSequence(
+    "extract-scss-files",
+    "color-variables",
+    "compile-scss",
+    "cleanup",
+    cb
+  );
 });
 
 /**
