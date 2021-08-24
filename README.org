@@ -213,6 +213,7 @@ module.exports = {
   },
 };
 #+end_src
+
 ** Configuration
 *** Gulpfile
 First, we need to install gulp in our development environment.
