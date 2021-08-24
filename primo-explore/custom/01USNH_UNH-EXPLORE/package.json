@@ -7,11 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@orbis-cascade/primo-explore-external-search": "^1.2.0",
-    "primo-explore-help-menu": "^1.6.3",
-    "primo-explore-search-bar-sub-menu": "^1.0.13",
-    "primo-explore-unpaywall": "^1.4.1"
-  }
+  "license": "ISC"
 }

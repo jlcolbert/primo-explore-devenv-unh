@@ -63,21 +63,7 @@ I write this configuration in Emacs with Org Mode, using =org-babel= to tangle t
 * Configuration
 # How to configure this module, including common problems and how to address them.
 ** General
-This code block uses NoWEB to structure the ~main.js~ file.
-All configuration below will "tangle" to ~main.js~ according to the structure below (or other files as indicated).
-
 *** JavaScript
-
-When using =--browserify=, we use ~main.js~ instead of ~custom.js~.
-This file has to include our:
-1. package imports,
-2. our configuration files,
-3. our PRM directives,
-4. our modules,
-5. and our app constants, components, and values.
-
-LibChat goes after modules but before configuration!
-
 #+begin_src javascript :noweb yes :tangle ./js/main.js
 <<imports>>
 
@@ -99,15 +85,8 @@ app
 #+end_src
 
 *** SCSS
-UNH uses SCSS to customize look and feel.
-Here are some general SCSS partials for our Main view that don't correlate to any extensions.
-
 **** Partials
 ***** Magnifying Glass Button and LOAD Button
-This changes the magnifying glass and LOAD button to a gray color.
-This has to be separated out from the "positive" color configuration;
-otherwise, it changes these to green.
-
 #+begin_src scss :tangle ./scss/partials/_button-confirm.scss
 /* magnifying glass and load more */
 .md-button.button-confirm,
@@ -173,9 +152,6 @@ otherwise, it changes these to green.
 #+end_src
 
 ***** Left Spacer
-This centers the search box over the search results when facets are on the left side.
-For some reason, this is not done automatically.
-
 #+begin_src scss :tangle ./scss/partials/_left-spacer.scss
 @media (min-width: 1280px) and (max-width: 1919px) {
   .flex-lg-10,
@@ -191,34 +167,15 @@ For some reason, this is not done automatically.
 
 ** External Search
 *** Package
-https://github.com/alliance-pcsg/primo-explore-external-search
-
-The External Search package creates a facet in Primo and Primo VE which allows users to repeat their search query in various external search indexes, such as WorldCat and Google Scholar.
-
-First, install via the command line:
-
-#+begin_src shell
-cd path/to/view/folder
-yarn add --dev @orbis-cascade/primo-explore-external-search
-#+end_src
-
-Then add the import statement to ~main.js~
-
 #+begin_src javascript :noweb-ref imports
 import "@orbis-cascade/primo-explore-external-search";
 #+end_src
-
-And add the package name to the modules in ~main.js~
 
 #+begin_src javascript :noweb-ref packages
 "externalSearch",
 #+end_src
 
 *** Config
-We need to configure the links for External Search.
-Here, we configure UNH's proxied WorldCat and our proxied Google Scholar.
-The rest of the configuration comes from the package instructions.
-
 #+begin_src javascript :tangle ./js/components/externalSearch/externalSearch.config.js
 const ExternalSearchConfig = [
   {
@@ -271,17 +228,9 @@ export default ExternalSearchConfig;
 
 #+end_src
 
-For the WorldCat logo URL, I had to use the relative URL for the /website/, not the GitHub repository file structure!
-Hence, ~/discovery/custom/~ instead of ~/primo-explore/custom/~.
-I think this has to do with us being Primo VE.
-
-We need to import the configuration variable into ~main.js~
-
 #+begin_src javascript :noweb-ref configuration
 import ExternalSearchConfig from "./components/externalSearch/externalSearch.config";
 #+end_src
-
-And add the variable to our app configuration
 
 #+begin_src javascript :noweb-ref values
 .value("searchTargets", ExternalSearchConfig)
@@ -339,7 +288,7 @@ const Items = [
     id: "getting-started",
     title: "Getting Started",
     description:
-      "brief static html content with an overview on how to use the search box",
+      "brief static html content with an overview on how to use BULS; links to direct to main BULS help page in WordPress, other pages, and/or other sections of the menu",
     icon: { code: "description", group: "action" },
     template: `
       <h2>Using the Library Search Box</h2>
@@ -406,7 +355,7 @@ const Items = [
   {
     id: "whats-in-search",
     title: "What am I searching?",
-    description: `brief description of material types, "scopes", and collections; may have submenus for each of the above`,
+    description: `brief description of material types, "scopes", and collections; may have submenus for each of the above; likely also link out to WordPress page with all PCI collections`,
     icon: { code: "toc", group: "action" },
     template: `
       <h2>Databases/Journals</h2>

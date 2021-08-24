@@ -1,6 +1,6 @@
 {
   "name": "primo-explore-devenv-unh",
-  "version": "1.1.0",
+  "version": "2.0.6",
   "description": "The Exlibris Primo Open Discovery Framework",
   "author": "noamamit92",
   "devDependencies": {
@@ -49,7 +49,7 @@
     "gulp-flatten": "^0.4.0",
     "gulp-plumber": "1.2.1",
     "gulp-rename": "2.0.0",
-    "gulp-sass": "4.0.2",
+    "gulp-sass": "5.0.0",
     "gulp-sourcemaps": "3.0.0",
     "gulp-streamify": "1.0.2",
     "gulp-template": "5.0.0",
@@ -71,6 +71,7 @@
     "request": "^2.88.2",
     "require-dir": "1.2.0",
     "run-sequence": "^2.2.1",
+    "sass": "^1.35.2",
     "shelljs": "0.8.4",
     "stream-to-promise": "^3.0.0",
     "tar-fs": "2.1.1",
