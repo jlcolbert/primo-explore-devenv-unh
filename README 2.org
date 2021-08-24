@@ -58,15 +58,15 @@ If you /are/ using fish, then install the =asdf= oh-my-fish plugin by running th
 omf install asdf
 #+end_src
 
-Then you'll need to install the *latest release* of Node.js:
+Then you'll need to install the *latest stable release* of Node.js:
 #+begin_src shell
 asdf plugin add nodejs
-asdf install nodejs latest
+asdf install nodejs lts
 #+end_src
 
 Set the default version:
 #+begin_src shell
-asdf global nodejs latest
+asdf global nodejs lts
 #+end_src
 
 *Install gulp globally*
@@ -163,9 +163,9 @@ I like Arctic Ice Studio's JavaScript style guide, so I install their ESLint con
 yarn add --dev @arcticicestudio/eslint-config-base
 #+end_src
 
-Create an =.eslintrc.js= file:
+Create an =.eslintrc= file:
 #+begin_src shell
-touch .eslintrc.js
+touch .eslintrc
 #+end_src
 
 And an =.eslintignore= file:
@@ -189,33 +189,83 @@ Install =eslint-config-prettier=, =eslint-plugin-import=, and =eslint-plugin-pre
 yarn add --dev eslint-config-prettier eslint-plugin-import eslint-plugin-prettier
 #+end_src
 
-And add the following to your =.eslintrc.js=:
-#+begin_src javascript
-module.exports = {
-  extends: [
-    /* Provides support for all ESLint core rules. */
+And add the following to your =.eslintrc=:
+#+begin_src json :tangle .eslintrc
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
     "@arcticicestudio/eslint-config-base",
-    /*
-     * Optional entry point to enable support for projects using Prettier.
-     * Note that this must always be placed after the `@arcticicestudio/eslint-config-base` preset to take precedence,
-     * otherwise it won't prevent errors due to useless and possibly conflicting rules!
-     */
-    "@arcticicestudio/eslint-config-base/prettier",
+    "@arcticicestudio/eslint-config-base/prettier"
   ],
-  plugins: ["import"],
-  rules: {
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
     "import/no-extraneous-dependencies": [
       "error",
       {
-        devDependencies: ["**/*.js"],
-      },
-    ],
-  },
-};
+        "devDependencies": ["**/*.js"]
+      }
+    ]
+  }
+}
 #+end_src
+
 ** Configuration
 *** Gulpfile
-Ex Libris' =primo-explore-devenv= package 
+First, we need to install gulp in our development environment.
+#+begin_src shell
+yarn add --dev gulp
+#+end_src
+
+Then, test the version.
+#+begin_src shell
+gulp --version
+#+end_src
+
+You should see something like the following in your command line:
+#+begin_example
+CLI version: 2.3.0
+Local version: 4.0.2
+#+end_example
+
+Ex Libris' =primo-explore-devenv= package has =gulpfile.js= separate from the gulp directory and tasks.
+However, you can actually combine these!
+
+First, rename =gulpfile.js= to =index.js=.
+Then, rename the =gulp= folder to =gulpfile.js=.
+Finally, move your =index.js= files into the =gulpfile.js= folder.
+
+*Optional Step: Updating Syntax*
+
+If you have all the linters and formatters set up in Visual Studio Code like I do, you should be seeing a lot of angry red lines and weird light bulbs popping up in all the files in your =gulpfile.js= folder.
+And optional step is to update the JavaScript syntax to the latest ECMA standards.
+Note that you can't follow all of the suggestions;
+otherwise, gulp will break.
+Instead of breaking it down step by step, feel free to copy the files in this repository.
+Just make sure to set your ~PROXY_SERVER~ constant in =config.js= accordingly.
+The Ex Libris repository gives instructions.
+
 *** Colors
+In the root of your directory, you will see a =colors.json= file.
+This sets the colors for your customization package.
+Change the hex values accordingly.
+I also put a copy of =colors.json= in each view's CSS folder.
+I'm not sure if the root level file does anything, but I leave it there just in case.
+
+This is how you auto-generate the =app-colors.css= file for each view.
+
+#+begin_src shell
+gulp app-css --view VIEWCODEHERE --ve
+#+end_src
+
+Repeat this step for each view.
 
 ** Using Literate Programming
