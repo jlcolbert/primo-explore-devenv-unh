@@ -8,6 +8,11 @@ __metadata:
 "01usnh_unh-explore@workspace:primo-explore/custom/01USNH_UNH-EXPLORE":
   version: 0.0.0-use.local
   resolution: "01usnh_unh-explore@workspace:primo-explore/custom/01USNH_UNH-EXPLORE"
+  dependencies:
+    "@orbis-cascade/primo-explore-external-search": ^1.2.0
+    primo-explore-help-menu: ^1.6.3
+    primo-explore-search-bar-sub-menu: ^1.0.13
+    primo-explore-unpaywall: ^1.4.1
   languageName: unknown
   linkType: soft
 

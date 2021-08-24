@@ -35,12 +35,12 @@ const app = angular.module("viewCustom", [
 })();
 
 app
-.constant("helpMenuConfig", HelpMenuConfig)
-.constant("searchBarSubMenuItems", SearchBarSubMenuConfig)
-.constant("unpaywallConfig", UnpaywallConfig)
-.component("prmSearchBarAfter", PRMSearchBarAfterDirective)
-.component(
+  .constant("helpMenuConfig", HelpMenuConfig)
+  .constant("searchBarSubMenuItems", SearchBarSubMenuConfig)
+  .constant("unpaywallConfig", UnpaywallConfig)
+  .component("prmSearchBarAfter", PRMSearchBarAfterDirective)
+  .component(
     "prmSearchResultAvailabilityLineAfter",
     PRMSearchResultAvailabilityLineAfterDirective
   )
-.value("searchTargets", ExternalSearchConfig);
+  .value("searchTargets", ExternalSearchConfig);

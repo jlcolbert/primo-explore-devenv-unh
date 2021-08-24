@@ -9,7 +9,10 @@
   - [[#prerequisitespersonal-configuration][Prerequisites/Personal Configuration]]
   - [[#development-environment][Development Environment]]
     - [[#yarn][Yarn]]
-    - [[#formatting][Formatting]]
+    - [[#formatting-and-linting][Formatting and Linting]]
+  - [[#configuration][Configuration]]
+    - [[#gulpfile][Gulpfile]]
+    - [[#colors][Colors]]
   - [[#using-literate-programming][Using Literate Programming]]
 
 * Introduction
@@ -29,7 +32,7 @@ Run the following in your terminal:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 #+end_src
 
-*Install the iTerm2 terminal emulator*
+*Install the iTerm2 terminal emulator (optional)*
 #+begin_src shell
 brew install --cask iterm2
 #+end_src
@@ -37,40 +40,45 @@ brew install --cask iterm2
 *Install the fish shell (optional)*
    
 I like fish as opposed to bash or zsh.
-This step is optional, but the way I will eventually install =nvm= will differ from the way you do if you use bash or zsh.
+This step is optional, but the way I will eventually install =nodejs= will differ from the way you do if you use bash or zsh.
 If you use fish, make sure to make it your default shell: https://fishshell.com/docs/current/tutorial.html#switching-to-fish
 #+begin_src shell
 brew install fish
 #+end_src
 
-*Install NVM*
-   
-Because I use the fish shell, I will do this differently than you will if you use bash or zsh.
-If you are using something that isn't fish, follow these instructions: https://github.com/nvm-sh/nvm#installing-and-updating
+*Install ASDF*
 
-If you /are/ using fish, then install the =nvm.fish= Fisher plugin by running this in the command line:
+=asdf= is a tool version manager.
+It can replace other tool version managers such as =nvm=.
+Because I use the fish shell, I will install =asdf= differently than you will if you use bash or zsh.
+If you are using something that isn't fish, follow these instructions: https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies
+
+If you /are/ using fish, then install the =asdf= oh-my-fish plugin by running this in the command line:
 #+begin_src shell
-fisher install jorgebucaran/nvm.fish
+omf install asdf
 #+end_src
 
-Then you'll need to install the *latest stable release* of Node.js:
+Then you'll need to install the *latest release* of Node.js:
 #+begin_src shell
-nvm install latest
+asdf plugin add nodejs
+asdf install nodejs latest
 #+end_src
 
 Set the default version:
 #+begin_src shell
-set --universal nvm_default_version lts
+asdf global nodejs latest
 #+end_src
 
 *Install gulp globally*
 #+begin_src shell
-npm install -g gulp
+npm install --global gulp-cli
 #+end_src
 
 *Install yarn globally*
 #+begin_src shell
-npm install -g yarn
+asdf plugin add yarn
+asdf install yarn latest
+asdf global yarn latest
 #+end_src
 
 *Install Visual Studio Code*
@@ -86,6 +94,8 @@ cd /path/to/primo-explore-devenv
 
 *** Yarn
 I use yarn instead of npm for installing node packages.
+With yarn, you need to update the version on a project level;
+this means the version of yarn in your project will be higher than your global version.
 #+begin_src shell
 yarn set version berry
 #+end_src
@@ -94,6 +104,8 @@ You'll want to keep the node modules folder, though, so create a =.yarnrc.yml= f
 #+begin_src shell
 touch .yarnrc.yml
 #+end_src
+
+(Eventually, I will figure out how to use yarn without the node modules in the Primo development environment. I think it involves fiddling around with the gulp tasks.)
 
 And add the following:
 #+begin_src yaml
@@ -106,7 +118,7 @@ yarn
 yarn install
 #+end_src
 
-*** Formatting
+*** Formatting and Linting
 In order to keep things tidy, I use a combination of formatters and linters.
 
 **** Prettier
@@ -114,6 +126,8 @@ I use Prettier purely for formatting, not for syntax.
 #+begin_src shell
 yarn add --dev --exact prettier
 #+end_src
+
+Note: instead of ~install --save-dev~, yarn uses ~add --dev~.
 
 Create a =.prettierrc= file:
 #+begin_src shell
@@ -136,12 +150,12 @@ And put in the following so Prettier will ignore all of the code in the =node_mo
 **/node_modules/*
 #+end_src
 
-I also install it as a plugin in Visual Studio Code, for auto-formatting.
+I also install it as a plugin in Visual Studio Code and make it my default formatter, for auto-formatting.
 
 **** ESLint
 ESLint is for checking problems in JavaScript code.
 #+begin_src shell
-yarn add eslint --dev
+yarn add --dev eslint
 #+end_src
 
 I like Arctic Ice Studio's JavaScript style guide, so I install their ESLint configuration:
@@ -199,5 +213,24 @@ module.exports = {
   },
 };
 #+end_src
+** Configuration
+*** Gulpfile
+First, we need to install gulp in our development environment.
+#+begin_src shell
+yarn add --dev gulp
+#+end_src
+
+Then, test the version.
+#+begin_src shell
+gulp --version
+#+end_src
+
+#+RESULTS:
+| CLI   | version: | 2.3.0 |
+| Local | version: | 4.0.2 |
+
+Ex Libris' =primo-explore-devenv= package has =gulpfile.js= separate from the gulp directory and tasks.
+However, you can actually combine these!
+*** Colors
 
 ** Using Literate Programming
