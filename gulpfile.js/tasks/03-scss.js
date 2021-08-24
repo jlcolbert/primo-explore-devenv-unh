@@ -14,7 +14,7 @@ const gulp = require("gulp");
 const cssnano = require("gulp-cssnano");
 const debug = require("gulp-debug");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass")(require("sass"));
+const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const plumber = require("gulp-plumber");
 
