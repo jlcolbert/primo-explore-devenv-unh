@@ -163,9 +163,9 @@ I like Arctic Ice Studio's JavaScript style guide, so I install their ESLint con
 yarn add --dev @arcticicestudio/eslint-config-base
 #+end_src
 
-Create an =.eslintrc.js= file:
+Create an =.eslintrc= file:
 #+begin_src shell
-touch .eslintrc.js
+touch .eslintrc
 #+end_src
 
 And an =.eslintignore= file:
@@ -189,29 +189,33 @@ Install =eslint-config-prettier=, =eslint-plugin-import=, and =eslint-plugin-pre
 yarn add --dev eslint-config-prettier eslint-plugin-import eslint-plugin-prettier
 #+end_src
 
-And add the following to your =.eslintrc.js=:
-#+begin_src javascript
-module.exports = {
-  extends: [
-    /* Provides support for all ESLint core rules. */
+And add the following to your =.eslintrc=:
+#+begin_src json :tangle .eslintrc
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
     "@arcticicestudio/eslint-config-base",
-    /*
-     * Optional entry point to enable support for projects using Prettier.
-     * Note that this must always be placed after the `@arcticicestudio/eslint-config-base` preset to take precedence,
-     * otherwise it won't prevent errors due to useless and possibly conflicting rules!
-     */
-    "@arcticicestudio/eslint-config-base/prettier",
+    "@arcticicestudio/eslint-config-base/prettier"
   ],
-  plugins: ["import"],
-  rules: {
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
     "import/no-extraneous-dependencies": [
       "error",
       {
-        devDependencies: ["**/*.js"],
-      },
-    ],
-  },
-};
+        "devDependencies": ["**/*.js"]
+      }
+    ]
+  }
+}
 #+end_src
 
 ** Configuration
