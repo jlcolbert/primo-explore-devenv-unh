@@ -872,15 +872,7 @@ help-menu-topbar .notification-indicator {
     -webkit-box-sizing: border-box;
     box-sizing: border-box; } }
 
-/* LOCAL BANNER */
-body::before {
-  content: "UNH Manchester Library patrons: Click Request to reserve Manchester materials. Submit an ILL form for all other items.";
-  display: inline-block;
-  background: #ecd90f;
-  text-align: center;
-  width: 100%;
-  font-weight: bold; }
-
+/*@import "./partials/manch-banner";*/
 div#mainMenu {
   margin-left: 40%; }
 
