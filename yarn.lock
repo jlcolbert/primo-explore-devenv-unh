@@ -8428,11 +8428,11 @@ fsevents@~2.3.2:
   linkType: hard
 
 "nan@npm:^2.12.1, nan@npm:^2.13.2, nan@npm:^2.14.0":
-  version: 2.14.2
-  resolution: "nan@npm:2.14.2"
+  version: 2.15.0
+  resolution: "nan@npm:2.15.0"
   dependencies:
     node-gyp: latest
-  checksum: 36349b2e5df4182aa0d0cc43fcd6cc782ca560a83c2764743d80c14ba5028d0c54041a2f464b8d4cb18a884e04415034a0a764c745e1d5502ea34a5cb6470a39
+  checksum: 85bc21e90bcf7a1f1349f1e4fcf73190dcb43e5e7aac1082259b8b18baff618fef04d9eaf6ce896963341daa92461fd12908e2cd41795984462e2eeca327d161
   languageName: node
   linkType: hard
 
